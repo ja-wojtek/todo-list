@@ -2,17 +2,44 @@
 <html lang="pl">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>TODO LIST</title>
- <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO LIST</title>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+  <div class="todo">
+    <div class="header">
+      <h1>TODO LIST</h1>
+      <input type="text" class="todo-input" placeholder="Wpisz treść zadania...">
+      <button class="btn-add">Dodaj</button>
+    </div>
+    <div class="todolist">
+      <h3>LISTA ZADAŃ:</h3>
+      <p class="error-info">Brak zadań na liście.</p>
+      <ul>
+        <li data-id="'test1">Wypić kawę
+          <div class="tools">
+            <button class="complete">V</button>
+            <button class="edit">EDIT</button>
+            <button class="delete">X</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 
- <script src="./js/script.js"></script>
+  <div class="popup">
+    <h3>Edytuj zadanie:</h3>
+    <div class="popup-body">
+      <input type="text" class="popup-input" placeholder="Wpisz nową treść zadania...">
+      <button class="popup-btn accept">Zatwierdź</button>
+      <button class="popup-btn cancel">Anuluj</button>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
 </body>
-
 
 </html>
