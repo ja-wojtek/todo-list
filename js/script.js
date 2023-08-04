@@ -17,7 +17,8 @@ const prepareDOMEelements = () => {
 }
 
 const prepareDOMEvents = () => {
-  addBtn.addEventListener('click', addNewTodo)
+  addBtn.addEventListener('click', addNewTodo);
+  uList.addEventListener('click', checkClick);
 }
 
 const addNewTodo = () => {
@@ -53,6 +54,18 @@ const createToolsArea = () => {
   deleteBtn.textContent = 'X'
 
   toolsPanel.append(completeBtn, editBtn, deleteBtn);
+}
+
+
+const checkClick = (e) => {
+  if (e.target.matches('.complete')) {
+    e.target.closest('li').classList.toggle('completed');
+    e.target.classList.toggle('completed');
+  } else if (e.target.matches('.edit')) {
+    console.log('Edit');
+  } else if (e.target.matches('.delete')) {
+    console.log('Deleted');
+  }
 }
 
 document.addEventListener('DOMContentLoaded', main);
